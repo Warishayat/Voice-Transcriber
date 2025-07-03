@@ -8,15 +8,11 @@ from io import BytesIO
 warnings.filterwarnings("ignore")
 
 load_dotenv()
+# to check ffmpg path exit or not.
 ffmpeg_path = os.getenv("FFMPEG_PATH")
 
-# to check ffmpg path exit or not.
-if ffmpeg_path and os.path.exists(ffmpeg_path):
-    AudioSegment.converter = ffmpeg_path
-elif os.path.exists("ffmpeg.exe"):
-    AudioSegment.converter = os.path.join(os.getcwd(), "ffmpeg.exe")
-else:
-    raise FileNotFoundError("FFmpeg not found, set ffmpeg in .env or root directory.")
+AudioSegment.converter = "ffmpeg"
+
 
 
 #saves logs
