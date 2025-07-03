@@ -1,6 +1,5 @@
-dotenv
-groq
-pydub
-SpeechRecognition
-PyAudio
 streamlit
+pydub
+speechrecognition
+groq
+python-dotenv
