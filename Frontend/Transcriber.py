@@ -2,7 +2,7 @@ from groq import Groq
 from dotenv import load_dotenv
 import os
 import warnings
-from Speech_Recognizer import record_audio
+# from Frontend.Speech_Recognizer import record_audio
 
 warnings.filterwarnings('ignore')
 
@@ -29,7 +29,12 @@ def transcribe_text(file_path):
         return transcribtion.text
     
 
-
+# pipeline
+#1: first i will record the voice through microphone
+#2: as my voice input will complete the audio will save on path file.
+#3: pass that voice to the transcribe_text function for transcribe the path audio file.
+#4: from transcrib_text we will receive the text that will transcribe from the audio
+#5: Print the response on the screen
 if __name__ == "__main__":
     path = "Speech_recognizer.mp3"
     record_audio(file_path=path)
