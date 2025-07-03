@@ -1,0 +1,6 @@
+dotenv
+groq
+pydub
+SpeechRecognition
+PyAudio
+streamlit
